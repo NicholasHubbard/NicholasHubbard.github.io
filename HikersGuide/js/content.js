@@ -11,25 +11,16 @@ jsonFile.onload = function () {
     var data = JSON.parse(jsonFile.responseText);
 
     // Insert the HTML Articles & into section
-    var posts = document.querySelector('#recentPosts');
+    var postElement = document.querySelectorAll('#recentPosts li');
 
-    // using if conditional to make sure there is a connection to he JSON to pull data from
-    if (posts) {
-        var recentPosts = '';
-        for (var i = 0; i < data.posts.length; i++) {
+    for (var i = 0; i < postElement.length; i++) {
 
-            recentPosts += '<article>';
-            recentPosts += '<p><img src="'+ data.posts[i].imageURL + '"alt="' + data.posts[i].subtitle + '" width="300" height="200"></p>';
-            recentPosts += '<h3>' + data.posts[i].title + '</h3>';
-
-            recentPosts += '<p>' + data.posts[i].text + '</p>';
-
-            recentPosts += '</article>';
-
-        }
-
-        posts.querySelector('h2').insertAdjacentHTML('beforeend', recentPosts);
+        postElement[i].getElementsByTagName('h3')[0].innerHTML = data.posts[i].title;
+        postElement[i].getElementsByTagName('p')[0].innerHTML = data.posts[i].author;
+        postElement[i].getElementsByTagName('p')[1].innerHTML = data.posts[i].text;
+        
     }
+
 };
 
 // Call Ajax
