@@ -10,18 +10,32 @@ jsonFile.onload = function () {
     // variable to save the JSON data
     var data = JSON.parse(jsonFile.responseText);
 
-    // Insert the HTML Articles & into section
-    var postElement = document.querySelectorAll('#recentPosts li');
+    // Highlighted locations (index.html)
 
-    for (var i = 0; i < postElement.length; i++) {
 
-        postElement[i].getElementsByTagName('li')[i].innerHTML = "<img src=" + 'data.posts[i].imageURL' + "/>";
-        //postElement[i].getElementsByTagName('img').alt[0].innerHTML = data.posts[i].subtitle;
-        postElement[i].getElementsByTagName('h3')[0].innerHTML = data.posts[i].title;
-        postElement[i].getElementsByTagName('p')[0].innerHTML = data.posts[i].author;
-        postElement[i].getElementsByTagName('p')[1].innerHTML = data.posts[i].text;
+    // Recent Posts (index.html)
+    var recentPosts = '';
+    recentPosts += '<h2><strong>Recent Posts</strong></h2>';
+    recentPosts += '<ul>';
 
+    for (var i = 0; i < data.posts.length; i++){
+
+        recentPosts += '<li>';
+        recentPosts += '<img src=" ' + data.posts[i].imageURL + ' " alt = " ' + data.posts[i].subtitle + '" width="300" height="200" />';
+        recentPosts += '<h3>' + data.posts[i].title + '</h3>';
+        recentPosts += '<p>' + data.posts[i].author + '</p>';
+        recentPosts += '<p>' + data.posts[i].text + '</p>';
+        recentPosts += '</li>';
     }
+
+    recentPosts += '</ul>';
+    var content2 = document.querySelector('#recentPosts');
+    content2.innerHTML = recentPosts;
+
+
+    // 
+
+
 
 };
 
