@@ -15,8 +15,8 @@ jsonFile.onload = function () {
 
     for (var i = 0; i < postElement.length; i++) {
 
-        postElement[i].getElementsByTagName('img').src[0].innerHTML = data.posts[i].imageURL;
-        postElement[i].getElementsByTagName('img').alt[0].innerHTML = data.posts[i].subtitle;
+        postElement[i].getElementsByTagName('li')[i].innerHTML = "<img src=" + 'data.posts[i].imageURL' + "/>";
+        //postElement[i].getElementsByTagName('img').alt[0].innerHTML = data.posts[i].subtitle;
         postElement[i].getElementsByTagName('h3')[0].innerHTML = data.posts[i].title;
         postElement[i].getElementsByTagName('p')[0].innerHTML = data.posts[i].author;
         postElement[i].getElementsByTagName('p')[1].innerHTML = data.posts[i].text;
