@@ -20,11 +20,11 @@ jsonFile.onload = function () {
 
         for (var i = 0; i < data.locations.length; i++) {
 
-            locations += '<li><button>';
+            locations += '<li>';
             locations += '<h2>' + data.locations[i].city + ", " + data.locations[i].state + '</h2>';
             locations += '<p>' + data.locations[i].title + '</p>';
             locations += '<p>' + data.locations[i].text + '</p>';
-            locations += '</button></li>';
+            locations += '</li>';
         }
         locations += '<button>Next</button>';
         locations += '</ul>';

@@ -2,6 +2,57 @@
 ================================================== 
 ================================================== */
 
+
 html {
-	
+	font-size: 62.5%;
 }
+
+body{
+    font: 1.6rem/1.5 "Program OT", Arial, Georgia, sans-serif;
+	color: #AAAAAA;
+	background: #222222;
+}
+
+/* TYPOGRAPHY */
+h2{
+	color: #EEEEEE;
+	font-size: 3.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+h3{
+	color: #888888;
+	font-weight: 900;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+}
+
+/* BASE STRUCTURE */
+header, body > section, footer {
+	border: 5px solid red;
+	padding: 2rem;
+}
+
+.wrapper {
+	border: 5px solid white;
+}
+
+#testimonials,#aboutUs {
+	background-color: #111111;
+}
+
+footer {
+	background-color: #000000;
+}
+
+.wrapper, #testimonials, #aboutUs {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
