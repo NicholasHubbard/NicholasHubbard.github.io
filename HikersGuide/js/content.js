@@ -15,7 +15,7 @@ jsonFile.onload = function () {
 
     if(content1) {
         var locations = '';
-        locations += '<ul>';
+        locations += '<ul class="pagination">';
         locations += '<button>Previous</button>';
 
         for (var i = 0; i < data.locations.length; i++) {

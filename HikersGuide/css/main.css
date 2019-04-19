@@ -29,16 +29,41 @@ h3{
 }
 
 /* BASE STRUCTURE */
+/*
 header, body > section, footer {
 	border: 5px solid red;
 	padding: 2rem;
-}
+}*/
 
+/*
 .wrapper {
 	border: 5px solid white;
+}*/
+
+header, #recentPosts, #signUp{
+	background-color: #222222;
 }
 
-#testimonials,#aboutUs {
+nav{
+	float: right;
+}
+nav li{
+	display: inline-block;
+}
+nav a{
+	display: block;
+	padding: 1rem 2rem;
+	color: inherit;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#testimonials{
+	background-color: #1ABC9C;
+}
+
+#aboutUs {
 	background-color: #111111;
 }
 
@@ -46,11 +71,12 @@ footer {
 	background-color: #000000;
 }
 
-.wrapper, #testimonials, #aboutUs {
-	max-width: 1000px;
+header, #recentPosts, #signUp, .wrapper {
+	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 
 
 
