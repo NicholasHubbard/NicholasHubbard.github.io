@@ -44,6 +44,16 @@ header, #recentPosts, #signUp{
 	background-color: #222222;
 }
 
+#main {
+	background-image: url("../images/hikers1001.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	filter: brightness(50%);
+}
+
 nav{
 	float: right;
 }
