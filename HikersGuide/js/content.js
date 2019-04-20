@@ -44,7 +44,7 @@ jsonFile.onload = function () {
 
             recentPosts += '<li>';
             recentPosts += '<img src=" ' + data.posts[j].imageURL + ' " alt = " ' + data.posts[j].subtitle + '" width="300" height="200" />';
-            recentPosts += '<h3>' + data.posts[j].title + '</h3>';
+            recentPosts += '<h4>' + data.posts[j].title + '</h4>';
             recentPosts += '<p>' + data.posts[j].author + '</p>';
             recentPosts += '<p>' + data.posts[j].text + '</p>';
             recentPosts += '<p><a href="">Read More</a></p>';
@@ -63,11 +63,11 @@ jsonFile.onload = function () {
 
     if(content3) {
         var upcomingEvent = '';
-        upcomingEvent += '<h2>Upcoming Events</h2>';
+        upcomingEvent += '<h3>Upcoming Events</h3>';
         upcomingEvent += '<dl>';
 
         for (var z = 0; z < 3; z++) {
-            upcomingEvent += '<dt>' + data.events[z].title + '</dt>';
+            upcomingEvent += '<dt><strong>' + data.events[z].title + '</strong></dt>';
             upcomingEvent += '<dd>' + data.events[z].text + '</dd>';
         }
 
@@ -82,7 +82,7 @@ jsonFile.onload = function () {
 
     if (content4) {
         var hikersElement = '';
-        hikersElement += '<h2>New Hikers</h2>';
+        hikersElement += '<h3>New Hikers</h3>';
         hikersElement += '<dl>';
 
         for (var n = 0; n < 4; n++) {
@@ -103,7 +103,7 @@ jsonFile.onload = function () {
     if(content5) {
 
         var aboutUs = '';
-        aboutUs += '<h2>About</h2>';
+        aboutUs += '<h3>About</h3>';
         aboutUs += '<h3>' + data.about.title + '</h3>';
         aboutUs += '<p>' + data.about.text + '</p>';
         aboutUs += '<p>' + data.about.copyright + '</p>';

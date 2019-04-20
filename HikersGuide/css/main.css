@@ -8,7 +8,7 @@ html {
 }
 
 body{
-    font: 1.6rem/1.5 "Program OT", Arial, Georgia, sans-serif;
+    font: 1.6rem/1.5 "Program OT", Arial, sans-serif;
 	color: #AAAAAA;
 	background: #222222;
 }
@@ -22,11 +22,25 @@ h2{
 }
 
 h3{
-	color: #888888;
+	font: 1.6rem/1.5 "Georgia", sans-serif;
+	color: #CCCCCC;
 	font-weight: 900;
 	font-size: 2.4rem;
 	text-transform: uppercase;
 }
+
+h4{
+	color: #AAAAAA;
+	font-weight: 900;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+p{
+	color: #888888;
+	font-size: 1.4rem;
+}
+
 
 /* BASE STRUCTURE */
 /*
@@ -40,18 +54,10 @@ header, body > section, footer {
 	border: 5px solid white;
 }*/
 
+
+/* LAYOUT */
 header, #recentPosts, #signUp{
 	background-color: #222222;
-}
-
-#main {
-	background-image: url("../images/hikers1001.jpg");
-	background-repeat: no-repeat;
-	background-position: right top;
-	max-height: 100%;
-	max-width: 100%;
-	object-fit: cover;
-	filter: brightness(50%);
 }
 
 nav{
@@ -61,15 +67,29 @@ nav li{
 	display: inline-block;
 }
 nav a{
+
 	display: block;
 	padding: 1rem 2rem;
 	color: inherit;
 	font-weight: 900;
 	text-transform: uppercase;
 	text-decoration: none;
+	opacity: 50%;
+
 }
 
-#testimonials{
+#main{
+	background-image: url("../images/hikers1001.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: fill;
+	filter: brightness(60%);
+}
+
+#testimonials {
 	background-color: #1ABC9C;
 }
 
@@ -77,16 +97,42 @@ nav a{
 	background-color: #111111;
 }
 
+.column1of3, .column2of3, .column3of3 {
+	box-sizing: border-box;
+	width: calc(100% / 3);
+	float: left;
+	margin: 10px;
+}
+
 footer {
 	background-color: #000000;
 }
 
 header, #recentPosts, #signUp, .wrapper {
-	max-width: 960px;
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+
+/******  RECENT POSTS  ******/
+#recentPosts ul{
+	padding: 0;
+	border: 1px solid red;
+}
+
+#recentPosts li {
+	box-sizing: border-box;
+	width: calc(100% / 3 - 5px);
+	float: left;
+	padding: 5px;
+	border: 1px solid white;
+	list-style-type: none;
+}
+
+#recentPosts li img {
+
+}
 
 
 
