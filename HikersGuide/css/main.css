@@ -78,15 +78,21 @@ nav a{
 
 }
 
-#main{
-	background-image: url("../images/hikers1001.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
+nav a:hover{
+	opacity: 100%;
+}
 
+nav a:active{
+	opacity: 100%;
+}
+
+#main {
+	background: url("../images/hikers1001.jpg") no-repeat center;
 	max-height: 100%;
 	max-width: 100%;
 	object-fit: fill;
-	filter: brightness(60%);
+	background-blend-mode: saturation;
+	
 }
 
 #testimonials {
@@ -98,8 +104,7 @@ nav a{
 }
 
 .column1of3, .column2of3, .column3of3 {
-	box-sizing: border-box;
-	width: calc(100% / 3);
+	width: calc(100% / 3 - 10px);
 	float: left;
 	margin: 10px;
 }
@@ -108,31 +113,47 @@ footer {
 	background-color: #000000;
 }
 
+
 header, #recentPosts, #signUp, .wrapper {
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 2em;
 }
 
 
 /******  RECENT POSTS  ******/
 #recentPosts ul{
 	padding: 0;
-	border: 1px solid red;
 }
 
 #recentPosts li {
-	box-sizing: border-box;
-	width: calc(100% / 3 - 5px);
+	background-color: #111111;
+	width: calc(100% / 3 - 20px);
 	float: left;
-	padding: 5px;
-	border: 1px solid white;
-	list-style-type: none;
+	padding: 1em;
+	margin: 10px;
 }
 
-#recentPosts li img {
+#recentPosts li p a {
+	color: #EEEEEE;
+	text-transform: uppercase;
 
 }
+
+#recentPosts ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#aboutUs::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
 
 
 

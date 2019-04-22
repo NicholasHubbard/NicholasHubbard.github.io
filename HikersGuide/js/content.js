@@ -43,7 +43,7 @@ jsonFile.onload = function () {
         for (var j = 0; j < data.posts.length; j++) {
 
             recentPosts += '<li>';
-            recentPosts += '<img src=" ' + data.posts[j].imageURL + ' " alt = " ' + data.posts[j].subtitle + '" width="300" height="200" />';
+            recentPosts += '<img src=" ' + data.posts[j].imageURL + ' " alt = " ' + data.posts[j].subtitle + '" width="260" height="180" />';
             recentPosts += '<h4>' + data.posts[j].title + '</h4>';
             recentPosts += '<p>' + data.posts[j].author + '</p>';
             recentPosts += '<p>' + data.posts[j].text + '</p>';
@@ -52,6 +52,7 @@ jsonFile.onload = function () {
         }
 
         recentPosts += '</ul>';
+        recentPosts += '<p><a href="">View More</a> </p>';
         content2.innerHTML = recentPosts;
 
     }
