@@ -43,10 +43,10 @@ jsonFile.onload = function () {
         for (var j = 0; j < data.posts.length; j++) {
 
             recentPosts += '<li>';
-            recentPosts += '<img src=" ' + data.posts[j].imageURL + ' " alt = " ' + data.posts[j].subtitle + '" width="260" height="180" />';
+            recentPosts += '<img src=" ' + data.posts[j].imageURL + ' " alt = " ' + data.posts[j].subtitle + '" width="290" height="200" />';
             recentPosts += '<h4>' + data.posts[j].title + '</h4>';
             recentPosts += '<p>' + data.posts[j].author + '</p>';
-            recentPosts += '<p>' + data.posts[j].text + '</p>';
+            recentPosts += '<p id="spaceAfter">' + data.posts[j].text + '</p>';
             recentPosts += '<p><a id="readMore" href="">Read More</a></p>';
             recentPosts += '</li>';
         }

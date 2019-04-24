@@ -42,6 +42,7 @@ p{
 }
 
 
+
 /* BASE STRUCTURE */
 /*
 header, body > section, footer {
@@ -68,15 +69,12 @@ nav li{
 }
 
 nav a{
-
-	display: block;
-	padding: 1rem 2rem;
 	color: #EEEEEE;
-	opacity: 50%;
+	display: block;
 	font-weight: 900;
+	padding: 1rem 2rem;
 	text-transform: uppercase;
-	text-decoration: none;
-
+	opacity: 50%;
 }
 
 nav a:hover{
@@ -87,16 +85,10 @@ nav a:active{
 	opacity: 100%;
 }
 
-/*#main {
-	background: url("../images/mountain.png") bottom left 100% no-repeat, url("../images/hikers1001.jpg") center no-repeat;
-	max-height: 100%;
-	max-width: 100%;
-	background-blend-mode: saturation;
-}*/
-
 #main {
-	background: rgba(0,0,0,0.5);
+
 	background-image: url("../images/mountain.png"), url("../images/hikers1001.jpg");
+	background-color: rgba(0,0,0,0.5);
 	background-position: bottom left, center;
 	background-size: 60%, 2000px 800px;
 	background-repeat: no-repeat, no-repeat;
@@ -113,12 +105,7 @@ nav a:active{
 	background-color: #111111;
 }
 
-.column1of3, .column2of3, .column3of3 {
-	width: calc(100% / 3 - 10px);
-	float: left;
-	padding: 1em;
-	margin: 10px;
-}
+
 
 footer {
 	background-color: #000000;
@@ -126,7 +113,7 @@ footer {
 
 
 header, #recentPosts, #signUp, .wrapper {
-	max-width: 1000px;
+	max-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 2em;
@@ -149,9 +136,11 @@ header, #recentPosts, #signUp, .wrapper {
 #recentPosts li p a {
 	color: #EEEEEE;
 	text-transform: uppercase;
-
 }
 
+#spaceAfter::after{
+	content: " ";
+}
 
 #readMore{
 	color: #EEEEEE;
@@ -175,8 +164,39 @@ header, #recentPosts, #signUp, .wrapper {
 	clear: both;
 }
 
+#viewMore{
+	font-size: 1.4rem;
+	font-weight: 900;
+	color: #888888;
+	border: solid 2px #888888;
+	text-transform: uppercase;
+	padding: 0.75em;
+}
+
+/***** Testimonial *****/
+#testimonials p{
+	color: #CCCCCC;
+	font-size: 1.6rem;
+
+}
 
 
+/***** About Us Section *****/
+
+#aboutUs .wrapper{
+	display: grid;
+	grid-template-columns: 300px 200px 400px;
+	grid-gap: 50px;
+}
+
+
+#about h3{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+/***** Footer *****/
 
 
 
