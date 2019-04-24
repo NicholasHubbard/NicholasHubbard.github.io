@@ -105,7 +105,7 @@ jsonFile.onload = function () {
 
         var aboutUs = '';
         aboutUs += '<h3>About</h3>';
-        aboutUs += '<h3>' + data.about.title + '</h3>';
+        aboutUs += '<h4>' + data.about.title + '</h4>';
         aboutUs += '<p>' + data.about.text + '</p>';
         aboutUs += '<p>' + data.about.copyright + '</p>';
 
