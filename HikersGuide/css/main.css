@@ -61,6 +61,10 @@ header, #recentPosts, #signUp{
 	background-color: #222222;
 }
 
+#main h1{
+	display: inline-block;
+}
+
 nav{
 	float: right;
 }
@@ -227,21 +231,32 @@ header, #recentPosts, #signUp, .wrapper {
 }
 
 #upcomingEvents dt{
-	color: #CCCCCC;
+	color: #AAAAAA;
 	font-weight: 900;
 }
 
 #upcomingEvents dl{
+	color: #888888;
 	margin-bottom: 20px;
 }
 
+#newHikers dt{
+	color: #AAAAAA;
+	font-weight: 900;
+}
+
+#newHikers dl{
+	color: #888888;
+}
 
 
 
 
 /***** Footer *****/
 
-
+#footer{
+	
+}
 
 
 
