@@ -18,7 +18,7 @@ jsonFile.onload = function () {
         locations += '<ul class="pagination">';
         locations += '<button>Previous</button>';
 
-        for (var i = 0; i < data.locations.length; i++) {
+        for (var i = 0; i < 4; i++) {
 
             locations += '<li>';
             locations += '<h2>' + data.locations[i].city + ", " + data.locations[i].state + '</h2>';
@@ -47,12 +47,12 @@ jsonFile.onload = function () {
             recentPosts += '<h4>' + data.posts[j].title + '</h4>';
             recentPosts += '<p>' + data.posts[j].author + '</p>';
             recentPosts += '<p>' + data.posts[j].text + '</p>';
-            recentPosts += '<p><a href="">Read More</a></p>';
+            recentPosts += '<p><a id="readMore" href="">Read More</a></p>';
             recentPosts += '</li>';
         }
 
         recentPosts += '</ul>';
-        recentPosts += '<p><a href="">View More</a> </p>';
+        recentPosts += '<p><a id="viewMore" href="">View More</a> </p>';
         content2.innerHTML = recentPosts;
 
     }
