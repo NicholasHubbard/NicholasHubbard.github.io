@@ -78,16 +78,17 @@ nav a{
 	font-weight: 900;
 	padding: 1rem 2rem;
 	text-transform: uppercase;
-	opacity: 50%;
+	opacity: 0.5;
 }
 
 nav a:hover{
-	opacity: 100%;
+	opacity: 1.0;
 }
 
 nav a:active{
-	opacity: 100%;
+	opacity: 1.0;
 }
+
 
 #main {
 	background-image: url("../images/mountain.png"), url("../images/hikers1001.jpg");
@@ -254,9 +255,27 @@ header, #recentPosts, #signUp, .wrapper {
 
 /***** Footer *****/
 
-#footer{
-	
+.privacy{
+	color: #16A085;
+	text-transform: uppercase;
+	margin: 8px;
 }
+
+footer li{
+	float: right;
+	display: inline-block;
+	margin: 5px;
+
+}
+
+footer img{
+	opacity: 0.5;
+}
+
+footer img:hover{
+	opacity: 1.0;
+}
+
 
 
 
