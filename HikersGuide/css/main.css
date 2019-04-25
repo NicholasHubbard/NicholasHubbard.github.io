@@ -89,8 +89,7 @@ nav a:active{
 	opacity: 1.0;
 }
 
-
-#main {
+#main, .secondaryHeader{
 	background-image: url("../images/mountain.png"), url("../images/hikers1001.jpg");
 	background-color: rgba(0,0,0,0.5);
 	background-position: bottom left, center;
@@ -250,9 +249,6 @@ header, #recentPosts, #signUp, .wrapper {
 	color: #888888;
 }
 
-
-
-
 /***** Footer *****/
 
 .privacy{
@@ -263,9 +259,8 @@ header, #recentPosts, #signUp, .wrapper {
 
 footer li{
 	float: right;
-	display: inline-block;
+	display: inline;
 	margin: 5px;
-
 }
 
 footer img{
