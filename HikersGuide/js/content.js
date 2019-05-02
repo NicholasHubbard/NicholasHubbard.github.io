@@ -130,7 +130,7 @@ jsonFile.onload = function () {
             blogPosts += '<img src=" ' + data.posts[b].imageURL + ' " alt = " ' + data.posts[b].subtitle + '" width="400" height="300"/>';
             blogPosts += '<h3>' + data.posts[b].subtitle + '</h3>';
             blogPosts += '<p>' + data.posts[b].text + '</p>';
-            blogPosts += '<p><a href="">More</a> </p>';
+            blogPosts += '<p><a id="readMore" href="">Read More</a></p>';
             blogPosts += '</article>';
             blogPosts += '</li>';
         }

@@ -123,6 +123,8 @@ header, #recentPosts, #signUp, .wrapper {
 	padding: 2em;
 }
 
+/****** Pagination ******/
+
 
 /******  RECENT POSTS  ******/
 #recentPosts ul{
@@ -134,7 +136,7 @@ header, #recentPosts, #signUp, .wrapper {
 	width: calc(100% / 3 - 20px);
 	float: left;
 	padding: 1em;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	margin: 10px;
 }
 
@@ -157,7 +159,8 @@ header, #recentPosts, #signUp, .wrapper {
 	padding-right: 20px;
 	padding-bottom: 10px;
 	border-bottom: solid 5px #16A085;
-	float: bottom;
+	margin-top: 10px;
+	display: inline-block;
 }
 
 #recentPosts ul::after {
@@ -188,12 +191,12 @@ header, #recentPosts, #signUp, .wrapper {
 	background-image: url("../images/climbers.png"), url("../images/hikers1001.jpg");
 	background-color: #16A085;
 	background-position: bottom, bottom;
-	background-size: 60%, 2000px 600px;
+	background-size: 50%, 2000px 600px;
 	background-repeat: no-repeat, no-repeat;
 	max-width: 100%;
 	max-height: 100%;
 	padding: 7em;
-	background-blend-mode: normal, hard-light;
+	background-blend-mode: normal, screen;
 	border-bottom: solid 20px #111111;
 }
 #testimonials p{
@@ -243,6 +246,7 @@ header, #recentPosts, #signUp, .wrapper {
 #newHikers dt{
 	color: #AAAAAA;
 	font-weight: 900;
+	float: right;
 }
 
 #newHikers dl{
@@ -272,6 +276,98 @@ footer img:hover{
 }
 
 
+/**** CONTACT ****/
+/* INPUTS
+====================================================================== */
+input,
+textarea {
+	width: 30%;
+	padding: 1rem 0;
+	background: none;
+	border-bottom: 1px solid #dddddd;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #EEEEEE;
+	transition: all 0.5s;
+}
 
+#dataEntry .required{
+	display: grid;
+	grid-template-columns: 300px 300px 300px;
+	grid-gap: 50px;
+}
+
+input:focus,
+textarea:focus {
+	border-bottom: 1px solid #aaaaaa;
+}
+input::placeholder,
+textarea::placeholder {
+	color: #EEEEEE;
+	font-weight: 400;
+}
+textarea { height: 15rem; }
+
+/* SUBMIT
+====================================================================== */
+button[type='submit'].disabled {
+	cursor: not-allowed;
+	opacity: 0.15
+}
+button[type='submit'] {
+	display: block;
+	width: 50%;
+	padding: 1rem;
+	background: #222222;
+	color: #f0f0f0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-weight: 900;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+button[type='submit']:not(.disabled):hover {
+	background: #333333;
+	transform: scale(1.025);
+}
+button[type='submit']:not(.disabled):active {
+	background: #111111;
+	transform: scale(1.05);
+}
+
+/* ERROR LABEL
+====================================================================== */
+@keyframes bounce-right {
+	0% {
+		transform: translateY(20rem);
+		opacity: 0;
+	}
+	50% { opacity: 0.25; }
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.error {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5rem;
+	border: 2px solid #c0392b;
+	font-size: 1.4rem;
+	color: #c0392b;
+	animation: bounce-right 1s;
+}
+.error::before {
+	content: "\f071";
+	display: block;
+	position: absolute;
+	top: 0.5rem;
+	left: -3rem;
+	font: 2.1rem FontAwesome;
+	color: #c0392b;
+}
 
 

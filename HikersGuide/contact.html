@@ -25,7 +25,7 @@
         </header>
 
         <!-- Location with map -->
-        <section id="location">
+        <section id="location" class="wrapper">
             <h2>Contact Us</h2>
             <h3>Where we are located</h3>
 
@@ -46,28 +46,28 @@
         </section>
 
         <!-- Contact Form -->
-        <section id="contactForm">
+        <section id="contactForm" class="wrapper">
 
             <h3>Contact Form</h3>
 
-            <form action="storage.json" method="post">
-                <fieldset>
+            <form id="submissionForm" action="storage.json" method="post">
+                <fieldset id="dataEntry">
                     <p>
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Name:">
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" class="required" placeholder="Name:">
                     </p>
                     <p>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email:">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" class="required" placeholder="Email:">
                     </p>
                     <p>
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" placeholder="Phone:">
+                        <label for="phone"></label>
+                        <input type="text" name="phone" id="phone" class="required" placeholder="Phone:">
                     </p>
                 </fieldset>
 
                 <p>
-                    <label for="message">Message</label>
+                    <label for="message"></label>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Message:"></textarea>
                 </p>
 
@@ -92,5 +92,6 @@
         </footer>
 
         <script src="js/content.js"></script>
+        <script src="js/events.js"></script>
     </body>
 </html>
