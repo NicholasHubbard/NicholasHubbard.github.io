@@ -3,8 +3,9 @@
  * 
 */
 
+
+
 // Validate Inputs
-// ========================================
 var contactForm = document.querySelector("#submissionForm");
 
 // Disabling submit button
@@ -62,7 +63,7 @@ for (var i=0; i < requiredFields.length; i++) {
 function send(event) {
     event.preventDefault(); // Stop submission
 
-    var form = document.querySelector('#contactMe');
+    var form = document.querySelector('#submissionForm');
     var message = '<h2>Thank You!</h2><p>Thank you for contacting Hikers Guide, we will contact your shortly!</p>';
 
     var target = event.target;

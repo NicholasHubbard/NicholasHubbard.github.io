@@ -281,7 +281,6 @@ form {
 	position: relative;
 	max-width: 1000px;
 	padding: 3rem;
-	margin: 12rem auto 5rem auto;
 	background: #000000;
 	opacity: 0.85;
 }
@@ -290,7 +289,7 @@ form {
 
 input,
 textarea {
-	width: 30%;
+	width: 50%;
 	padding: 1rem 0;
 	background: none;
 	border-bottom: 1px solid #dddddd;
@@ -304,6 +303,7 @@ input:focus,
 textarea:focus {
 	border-bottom: 1px solid #aaaaaa;
 }
+
 input::placeholder,
 textarea::placeholder {
 	color: #EEEEEE;
@@ -315,7 +315,7 @@ textarea { height: 15rem; }
 ====================================================================== */
 button[type='submit'].disabled {
 	cursor: not-allowed;
-	opacity: 0.15
+	opacity: 0.50;
 }
 button[type='submit'] {
 	display: block;
