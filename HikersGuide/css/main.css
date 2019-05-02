@@ -277,8 +277,17 @@ footer img:hover{
 
 
 /**** CONTACT ****/
-/* INPUTS
-====================================================================== */
+form {
+	position: relative;
+	max-width: 1000px;
+	padding: 3rem;
+	margin: 12rem auto 5rem auto;
+	background: #000000;
+	opacity: 0.85;
+}
+
+
+
 input,
 textarea {
 	width: 30%;
@@ -289,12 +298,6 @@ textarea {
 	font-weight: 700;
 	color: #EEEEEE;
 	transition: all 0.5s;
-}
-
-#dataEntry .required{
-	display: grid;
-	grid-template-columns: 300px 300px 300px;
-	grid-gap: 50px;
 }
 
 input:focus,
@@ -337,6 +340,10 @@ button[type='submit']:not(.disabled):active {
 
 /* ERROR LABEL
 ====================================================================== */
+label:not(.error) {
+	display: none;
+}
+
 @keyframes bounce-right {
 	0% {
 		transform: translateY(20rem);
