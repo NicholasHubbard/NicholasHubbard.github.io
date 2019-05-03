@@ -89,6 +89,7 @@ nav a:active{
 	opacity: 1.0;
 }
 
+
 #main, .secondaryHeader{
 	background-image: url("../images/mountain.png"), url("../images/hikers1001.jpg");
 	background-color: rgba(0,0,0,0.5);
@@ -124,7 +125,6 @@ header, #recentPosts, #signUp, .wrapper {
 }
 
 /****** Pagination ******/
-
 
 /******  RECENT POSTS  ******/
 #recentPosts ul{

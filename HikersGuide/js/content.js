@@ -15,8 +15,9 @@ jsonFile.onload = function () {
 
     if(content1) {
         var locations = '';
-        locations += '<ul class="pagination">';
-        locations += '<button>Previous</button>';
+        locations += '<div class="pagination">';
+        locations += '<ul>';
+        locations += '<button id="previous"><img src="images/left.png" alt=""></button>';
 
         for (var i = 0; i < 4; i++) {
 
@@ -26,8 +27,9 @@ jsonFile.onload = function () {
             locations += '<p>' + data.locations[i].text + '</p>';
             locations += '</li>';
         }
-        locations += '<button>Next</button>';
+        locations += '<button id="next"><img src="images/right.png" alt=""></button>';
         locations += '</ul>';
+        locations += '</div>';
         content1.innerHTML = locations;
     }
 
