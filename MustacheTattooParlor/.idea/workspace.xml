@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e28cd052-bff5-4c5d-8ede-b727849d01d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../HikersGuide/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HikersGuide/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +55,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -123,12 +124,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569096303514</updated>
-      <workItem from="1569096305940" duration="193000" />
+      <workItem from="1569096305940" duration="692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193000" />
+    <option name="totallyTimeSpent" value="692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1547" height="951" extended-state="0" />
