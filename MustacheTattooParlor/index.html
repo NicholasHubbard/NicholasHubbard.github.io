@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="index.html" class="nav-item nav-link active">Home Page</a></li>
                     <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
-                    <li style="float:right"><a href="requestAppointment.html" id="requestNav" class="nav-item nav-link button">Request Appointment</a></li>
+                    <li style="float:right"><a href="requestAppointment.html" id="requestNav" class="nav-item nav-link button rounded">Request Appointment</a></li>
                 </ul>
             </div> <!-- Container -->
         </header>
@@ -34,6 +34,9 @@
 
             <section id="welcome">
                 <div class="row">
+                    <div class="text-center banner">
+                        <h1>Welcome to Mustache Tattoo Parlor</h1>
+                    </div>
                     <div class="col-sm-12 col-md-6">
                         <img src="images/tattoogun2.jpg" alt="tattoo gun" id="gunimg"
                              class="img-fluid rounded-lg figure-img">
@@ -61,8 +64,16 @@
 
             <section id="gallery">
                 <div class="row">
+                    <div class="text-center banner">
+                        <h1>Our Lovely Tattoos</h1>
+                    </div>
                     <!--col-->
-                    <div class="col-sm-12 col-md-6 align-self-center">
+                    <div class="col-sm-12- col-md-6 order-md-2 text-right">
+                        <img src="images/photo10.jpg" alt="Gallery Image" id="galleryimg"
+                             class="img-fluid rounded figure-img">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 order-md-1 align-self-center">
                         <div class="text-center">
                             <h2 class="text-center underline">Gallery</h2>
 
@@ -74,24 +85,22 @@
                                 tattoo, please click the button below.
                             </p>
 
-                            <a href="gallery.html" class="nav-item nav-link col-sm-6 button offset-sm-3">See More</a>
+                            <a href="gallery.html" id="seeMore" class="nav-item nav-link col-sm-6 button offset-sm-3">See More</a>
 
                         </div>
                     </div>
 
-                    <div class="col-sm-12 col-md-6">
-                        <img src="images/photo10.jpg" alt="Gallery Image" id="galleryimg"
-                             class="img-fluid rounded figure-img">
-                    </div>
+
                     <!--col-->
                 </div>
                 <!--row-->
             </section>
 
             <section id="aboutme">
-
-                <figure>
                     <div class="row">
+                        <div class="text-center banner">
+                            <h1>The Ruthless Leader</h1>
+                        </div>
                         <div class="col-sm-12 col-md-6">
                             <img src="images/tattooartist.jpeg" alt="" class="img-fluid rounded figure-img">
                         </div>
@@ -117,32 +126,31 @@
                         <!--col-->
                     </div>
                     <!--row-->
-                </figure>
             </section>
         </div>
         <!--Container-->
 
         <footer>
             <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <article id="contactFoot">
-                            <h3>Contact Me</h3>
-                            <p><a href="mailto:devilmaycry9@hotmail.com" class="text-decoration-none">devilmaycry9@hotmail.com</a></p>
-                            <address>
-                                <h3>Mustache Tattoo Parlor</h3>
-                                <p>749 Massachusetts St.</p>
-                                <p>Lawrence KS, 66049</p>
-                                <p>1-907-867-5309</p>
-                            </address>
-                        </article>
+                <div class="row justify-content-between">
+                    <div class="col-sm-3 text-center footer">
+                        <h3>Contact Me</h3>
+                        <p>1-907-867-5309</p>
+                        <p><a href="mailto:devilmaycry9@hotmail.com" class="text-decoration-none">devilmaycry9@hotmail.com</a></p>
                     </div>
-                    <div class="col-6 text-right">
-                        <article id="socialFoot" class="text-center">
+                    <div class="col-sm-4 text-center footer">
+                        <div>
+                            <h3>Mustache Tattoo Parlor</h3>
+                            <p>749 Massachusetts St.</p>
+                            <p>Lawrence KS, 66049</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-center footer">
+                        <div id="socialFoot" class="text-center">
                             <h3>Social Media</h3>
                             <a href="www.google.com"><img src="images/instagram.png" alt="instagram link" id="instagramlink"></a>
                             <p>Follow Us on Instagram</p>
-                        </article>
+                        </div>
                     </div>
                 </div>
                 <!--row-->

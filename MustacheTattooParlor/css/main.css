@@ -14,8 +14,8 @@ header {
     background-blend-mode: darken;
     height: 50vh;
     background-size: cover;
-    padding-top: 20px;
-    margin-bottom: 100px;
+    padding-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -62,7 +62,9 @@ a:hover{
     background: none;
     border: 0;
     box-sizing: border-box;
-    padding: 1.0em;
+    padding-top: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
     margin: auto;
     box-shadow: inset 0 0 0 2px white;
     font-weight: 700;
@@ -107,12 +109,21 @@ a:hover{
     width: 50px;
 }
 
-
+.footer{
+    padding-bottom: 50px;
+}
 
 
 /*--------- Typography ------------*/
 html {
     font-family: "Times New Roman", Arial, sans-serif;
+}
+
+h1{
+    font-family: Papyrus, Arial, sans-serif;
+    font-size: 38px;
+    color: #ffffff;
+    margin-top: 1rem;
 }
 
 h2{
@@ -144,24 +155,36 @@ p{
 
 /*------- Sections --------*/
 #welcome, #gallery, #aboutme{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 #frontPage img{
     height: 580px;
     width: 475px;
-    border: 5px solid #24FFD4;
+    border: 5px solid white;
     margin-bottom: 50px;
 }
 
+.banner {
+    background: #16A085;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
 
 
 
 /************************---------------------------------------------------Media **------------*/
 @media(max-width: 574px){
-    nav a{
-        margin-bottom: 2rem;
-        padding-left: 3px;
+    #seeMore {
+        margin-bottom: 30px;
+    }
+
+    #frontPage img{
+        height: 580px;
+        width: 475px;
+        border: 5px solid white;
+        margin-bottom: 50px;
     }
 }
 @media(min-width: 575px) {
@@ -176,6 +199,14 @@ p{
     #requestNav {
         float:right;
     }
+
+    #frontPage img{
+        height: 580px;
+        width: 475px;
+        border: 5px solid white;
+        margin-bottom: 50px;
+    }
+
 }
 
 @media(min-width: 700px) {
@@ -190,24 +221,30 @@ p{
         font-size: 12px;
     }
 
-    #logo {
-        height: 250px;
-        width: 250px;
-
-    }
-
     #aboutme p {
         position: relative;
         top: 20%;
         font-size: 16px;
     }
 
-}
-@media(min-width: 768px){
-    #gallerybtn{
-        position: relative;
-        top: 40%;
+    #frontPage img{
+        height: 580px;
+        width: 475px;
+        border: 5px solid white;
+        margin-bottom: 50px;
     }
+}
+
+@media(min-width: 768px){
+
+    #frontPage img{
+        height: 480px;
+        width: 375px;
+        border: 5px solid white;
+        margin-bottom: 50px;
+    }
+
+
 }
 
 @media(min-width: 991px) {
@@ -230,8 +267,15 @@ p{
     #aboutme p{
         font-size: 19px;
     }
-    #gallerybtn{
+    #gallery .button{
         position: relative;
         top: 40%;
+    }
+
+    #frontPage img{
+        height: 580px;
+        width: 475px;
+        border: 5px solid white;
+        margin-bottom: 50px;
     }
 }
