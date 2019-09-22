@@ -1,0 +1,84 @@
+/*
+Name: Nicholas Hubbard
+Class: Project & Portfolio IV
+Date: 21 Sept 2019
+*/
+
+/*--- Header Nav and Footer---*/
+body{
+    background-color: #222222;
+}
+
+header {
+    background: url("../images/tattoogun.png") center;
+    filter: brightness(100%);
+    height: 45vh;
+    background-size: cover;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header img {
+    height: 200px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+header a{
+    font-family: Papyrus, 'Times New Roman', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 4px 4px black;
+}
+
+a:hover{
+    color: #24FFD4;
+}
+
+.active{
+    color: #24FFD4;
+}
+
+#requestButton {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0.5em 2em;
+    box-shadow: inset 0 0 0 2px white;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+}
+#requestButton::before, #requestButton::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+#requestButton{
+    transition: color 0.25s; }
+#requestButton::before, #requestButton::after{
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+#requestButton::before{
+    top: 0;
+    left: 0; }
+#requestButton::after{
+    bottom: 0;
+    right: 0; }
+#requestButton:hover{
+    color: #60daaa; }
+#requestButton:hover::before, #requestButton:hover::after{
+    width: 100%;
+    height: 100%; }
+#requestButton:hover::before{
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+#requestButton:hover::after{
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
