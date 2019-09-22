@@ -11,11 +11,11 @@ body{
 
 header {
     background: url("../images/tattoogun.png") center;
-    filter: brightness(100%);
-    height: 45vh;
+    background-blend-mode: darken;
+    height: 50vh;
     background-size: cover;
     padding-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
@@ -25,11 +25,29 @@ header img {
     margin-bottom: 50px;
 }
 
-header a{
+a{
     font-family: Papyrus, 'Times New Roman', sans-serif;
     font-size: 20px;
     color: #ffffff;
     text-shadow: 4px 4px black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1em;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 a:hover{
@@ -40,45 +58,180 @@ a:hover{
     color: #24FFD4;
 }
 
-#requestButton {
+.button {
     background: none;
     border: 0;
     box-sizing: border-box;
-    padding: 0.5em 2em;
+    padding: 1.0em;
+    margin: auto;
     box-shadow: inset 0 0 0 2px white;
     font-weight: 700;
     position: relative;
     vertical-align: middle;
 }
-#requestButton::before, #requestButton::after {
+.button::before, .button::after {
     box-sizing: inherit;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%; }
 
-#requestButton{
+.button{
     transition: color 0.25s; }
-#requestButton::before, #requestButton::after{
+.button::before, .button::after{
     border: 2px solid transparent;
     width: 0;
     height: 0; }
-#requestButton::before{
+.button::before{
     top: 0;
     left: 0; }
-#requestButton::after{
+.button::after{
     bottom: 0;
     right: 0; }
-#requestButton:hover{
+.button:hover{
     color: #60daaa; }
-#requestButton:hover::before, #requestButton:hover::after{
+.button:hover::before, .button:hover::after{
     width: 100%;
     height: 100%; }
-#requestButton:hover::before{
+.button:hover::before{
     border-top-color: #60daaa;
     border-right-color: #60daaa;
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
-#requestButton:hover::after{
+.button:hover::after{
     border-bottom-color: #60daaa;
     border-left-color: #60daaa;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+#instagramlink {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
+/*--------- Typography ------------*/
+html {
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+h2{
+    font-family: Papyrus, Arial, sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+h3{
+    font-family: Papyrus, Arial, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+p{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#frontPage p{
+   margin-bottom: 50px;
+}
+
+
+/*------- Sections --------*/
+#welcome, #gallery, #aboutme{
+    margin-bottom: 60px;
+}
+
+#frontPage img{
+    height: 580px;
+    width: 475px;
+    border: 5px solid #24FFD4;
+    margin-bottom: 50px;
+}
+
+
+
+
+/************************---------------------------------------------------Media **------------*/
+@media(max-width: 574px){
+    nav a{
+        margin-bottom: 2rem;
+        padding-left: 3px;
+    }
+}
+@media(min-width: 575px) {
+    #aboutme p {
+        position: relative;
+        top: 25%;
+    }
+    nav a{
+        margin-right: 3rem;
+    }
+
+    #requestNav {
+        float:right;
+    }
+}
+
+@media(min-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    header p{
+        font-size: 12px;
+    }
+
+    #logo {
+        height: 250px;
+        width: 250px;
+
+    }
+
+    #aboutme p {
+        position: relative;
+        top: 20%;
+        font-size: 16px;
+    }
+
+}
+@media(min-width: 768px){
+    #gallerybtn{
+        position: relative;
+        top: 40%;
+    }
+}
+
+@media(min-width: 991px) {
+    html {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+    header p{
+        font-size: 14px;
+    }
+
+    #welcome p {
+        position: relative;
+        top: 18%;
+        font-size: 19px;
+    }
+    #aboutme p{
+        font-size: 19px;
+    }
+    #gallerybtn{
+        position: relative;
+        top: 40%;
+    }
+}
