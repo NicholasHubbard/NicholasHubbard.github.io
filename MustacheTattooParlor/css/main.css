@@ -173,8 +173,17 @@ p{
 }
 
 
+/*--------------- Gallery -------------------*/
+.collage {
+    margin-bottom: 50px;
+}
+#requestAppt{
+    display: block;
+    width: 50%;
+    margin-bottom: 60px;
+}
 
-/************************---------------------------------------------------Media **------------*/
+/*---------------- Media -------------------*/
 @media(max-width: 574px){
     #seeMore {
         margin-bottom: 30px;
