@@ -22,12 +22,43 @@
                 <ul>
                     <li><a href="index.html" class="nav-item nav-link">Home Page</a></li>
                     <li><a href="gallery.html" class="nav-item nav-link">Gallery</a></li>
-                    <li style="float:right"><a href="requestAppointment.html" id="requestNav" class="nav-item nav-link button rounded active">Request Appointment</a></li>
+                    <li id="requestNav"><a href="requestAppointment.html" class="nav-item nav-link button rounded">Request Appointment</a></li>
                 </ul>
             </div> <!-- Container -->
         </header>
 
         <div class="container">
+            <div class="text-center banner">
+                <h1>Request Appointment</h1>
+            </div>
+
+            <form action="sendToEmail">
+
+                <div class="form-group">
+                    <label class="form-control-label" for="fullName">Full Name: </label>
+                    <input class="form-control" type="text" required="required" id="fullName" placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="email">Last Name: </label>
+                    <input class="form-control" type="text" required="required" id="email" placeholder="Email Address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="phoneNumber">Phone Number: </label>
+                    <input class="form-control" type="text" required="required" id="phoneNumber" placeholder="Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="service">What Kind of Tattoo would you like: </label>
+                    <input class="form-control" type="text" required="required" id="service" placeholder="Tattoo Design Description">
+                </div>
+
+                <div class="form-group text-center">
+                    <input class="text-center" type="submit" value="Submit" id="submit">
+                </div>
+
+            </form>
 
         </div>
 
