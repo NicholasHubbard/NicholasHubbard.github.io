@@ -26,10 +26,9 @@ header img {
 }
 
 a{
-    font-family: Papyrus, 'Times New Roman', sans-serif;
-    font-size: 20px;
+    font: 20px Papyrus, 'Times New Roman', sans-serif;
     color: #ffffff;
-    text-shadow: 4px 4px black;
+    text-shadow: 2px 2px black;
 }
 
 ul {
@@ -120,15 +119,13 @@ html {
 }
 
 h1{
-    font-family: Papyrus, Arial, sans-serif;
-    font-size: 38px;
+    font: 38px Papyrus, Arial, sans-serif;
     color: #ffffff;
     margin-top: 1rem;
 }
 
 h2{
-    font-family: Papyrus, Arial, sans-serif;
-    font-size: 36px;
+    font: 36px Papyrus, Arial, sans-serif;
     color: #ffffff;
     margin-bottom: 50px;
 }
@@ -138,8 +135,7 @@ h2{
 }
 
 h3, label, input{
-    font-family: Papyrus, Arial, sans-serif;
-    font-size: 24px;
+    font: 24px Papyrus, Arial, sans-serif;
     color: #ffffff;
 }
 
@@ -252,15 +248,6 @@ p {
     p {
         font-size: 16px;
     }
-    header p{
-        font-size: 12px;
-    }
-
-    #aboutme p {
-        position: relative;
-        top: 20%;
-        font-size: 16px;
-    }
 
     #frontPage img{
         height: 580px;
@@ -283,24 +270,13 @@ p {
 
 @media(min-width: 991px) {
     html {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     p {
-        font-size: 17px;
-    }
-    header p{
-        font-size: 14px;
+        font-size: 20px;
     }
 
-    #welcome p {
-        position: relative;
-        top: 18%;
-        font-size: 19px;
-    }
-    #aboutme p{
-        font-size: 19px;
-    }
     #gallery .button{
         position: relative;
         top: 40%;
