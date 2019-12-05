@@ -9,7 +9,7 @@ class Races extends Component {
     }
 
     componentDidMount() {
-        fetch('http://www.dnd5eapi.co/api/races/?results=9')
+        fetch('http://www.dnd5eapi.co/api/races/')
         .then(results => {
             return results.json();
         }).then(data => {
@@ -39,3 +39,7 @@ class Races extends Component {
 }
 
 export default Races;
+
+const styles = {
+    
+};
