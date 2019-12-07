@@ -2,19 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { NavLink } from "react-router-dom";
-import Input from "../input/Input";
+//import Input from "../input/Input";
 
-function Race() {
+function Spell() {
   const [keyword, setKeyword] = useState("");
-  const [raceData, setRaceData] = useState([]);
+  const [spellData, setSpellData] = useState([]);
 
   useEffect(() => {
-    fetch("http://www.dnd5eapi.co/api/races/")
+    fetch("http://www.dnd5eapi.co/api/spells/")
       .then(results => {
         return results.json();
       })
       .then(data => {
-        setRaceData(data.results);
+        setSpellData(data.results);
       });
   }, []);
 
@@ -22,14 +22,14 @@ function Race() {
     setKeyword(e.target.value);
   };
 
-  console.log(raceData);
+  console.log(spellData);
 
   return (
     <div>
-      {raceData && (
+      {spellData && (
         <div>
           <h1>
-            D&D Race Search
+            D&D Spell Search
             <input
               value={keyword}
               onChange={handleChange}
@@ -40,21 +40,21 @@ function Race() {
 
           <ul>
             {keyword &&
-              raceData.map(race => {
-                return race.name
+              spellData.map(spell => {
+                return spell.name
                   .toUpperCase()
                   .startsWith(keyword.toUpperCase()) ? (
                   <li>
                     <NavLink
                       to={{
-                        pathname: "/Race/" + race.name,
+                        pathname: "/Spell/" + spell.name,
                         state: {
-                          raceURL: race.url
+                          spellURL: spell.url
                         }
                       }}
-                      key={race.name}
+                      key={spell.name}
                     >
-                      <p>{race.name}</p>
+                      <p>{spell.name}</p>
                     </NavLink>
                   </li>
                 ) : null;
@@ -63,12 +63,12 @@ function Race() {
         </div>
       )}
 
-      {!raceData && <Spinner />}
+      {!spellData && <Spinner />}
     </div>
   );
 }
 
-export default Race;
+export default Spell;
 
 const styles = {
   input: {

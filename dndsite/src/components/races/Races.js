@@ -18,6 +18,7 @@ class Races extends Component {
         let races = data.results.map(race => {
           return (
             <NavLink
+              style={{ textDecoration: "none" }}
               to={{
                 pathname: "/Race/" + race.name,
                 state: {
@@ -26,7 +27,7 @@ class Races extends Component {
               }}
               key={race.name}
             >
-              <p>{race.name}</p>
+              <p style={styles.anchor}>{race.name}</p>
             </NavLink>
           );
         });
@@ -47,4 +48,10 @@ class Races extends Component {
 
 export default Races;
 
-const styles = {};
+const styles = {
+  anchor: {
+    fontSize: "1em",
+    color: "#16A085",
+    textDecoration: "none"
+  }
+};
