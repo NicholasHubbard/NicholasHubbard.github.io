@@ -1,53 +1,53 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-class Races extends Component {
+class Monsters extends Component {
   constructor() {
     super();
     this.state = {
-      races: []
+      monsters: []
     };
   }
 
   componentDidMount() {
-    fetch("http://www.dnd5eapi.co/api/races/")
+    fetch("http://www.dnd5eapi.co/api/monsters/")
       .then(results => {
         return results.json();
       })
       .then(data => {
-        let races = data.results.map(race => {
+        let monsters = data.results.map(monster => {
           return (
             <NavLink
               style={{ textDecoration: "none" }}
               to={{
-                pathname: "/Race/" + race.name,
+                pathname: "/Monster/" + monster.name,
                 state: {
-                  raceURL: race.url
+                  monsterURL: monster.url
                 }
               }}
-              key={race.name}
+              key={monster.name}
             >
-              <p style={styles.anchor}>{race.name}</p>
+              <p style={styles.anchor}>{monster.name}</p>
             </NavLink>
           );
         });
-        this.setState({ races: races });
+        this.setState({ monsters: monsters });
 
-        console.log("state", this.state.races);
+        console.log("state", this.state.monsters);
       });
   }
 
   render() {
     return (
       <div className="container2">
-        <h1>Dungeons and Dragons List of Races</h1>
-        <div className="container1">{this.state.races}</div>
+        <h1>Dungeons and Dragons Monsters</h1>
+        <div className="container1">{this.state.monsters}</div>
       </div>
     );
   }
 }
 
-export default Races;
+export default Monsters;
 
 const styles = {
   anchor: {

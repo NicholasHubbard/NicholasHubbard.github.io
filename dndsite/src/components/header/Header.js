@@ -167,6 +167,15 @@ export default function PrimarySearchAppBar() {
       onClose={handleIconClose}
     >
       <NavLink
+        to="/Home"
+        style={{
+          textDecoration: "none",
+          color: "black"
+        }}
+      >
+        <MenuItem onClick={handleIconClose}>Home</MenuItem>
+      </NavLink>
+      <NavLink
         to="/Races"
         style={{
           textDecoration: "none",
@@ -185,13 +194,13 @@ export default function PrimarySearchAppBar() {
         <MenuItem onClick={handleIconClose}>Spells</MenuItem>
       </NavLink>
       <NavLink
-        to=""
+        to="/Monsters"
         style={{
           textDecoration: "none",
           color: "black"
         }}
       >
-        <MenuItem onClick={handleIconClose}>Equipment</MenuItem>
+        <MenuItem onClick={handleIconClose}>Monsters</MenuItem>
       </NavLink>
     </Menu>
   );
