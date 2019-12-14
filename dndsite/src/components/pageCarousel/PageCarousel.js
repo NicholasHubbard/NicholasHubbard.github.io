@@ -16,15 +16,21 @@ class PageCarousel extends Component {
       >
         <div style={styles.imgContainer}>
           <img src={carousel1} alt="first slide" style={styles.imgStyle} />
-          <h1 className="legend">Check out the Full DND 5th Edition</h1>
+          <h1 className="legend" style={styles.typography}>
+            Check out the Full DND 5th Edition
+          </h1>
         </div>
         <div style={styles.imgContainer}>
           <img src={carousel2} alt="second slide" style={styles.imgStyle} />
-          <h1 className="legend">Order Books NOW!</h1>
+          <h1 className="legend" style={styles.typography}>
+            Order Books NOW!
+          </h1>
         </div>
         <div style={styles.imgContainer}>
           <img src={carousel3} alt="thrid slide" style={styles.imgStyle} />
-          <h1 className="legend">Check out Critical Role</h1>
+          <h1 className="legend" style={styles.typography}>
+            Check out Critical Role
+          </h1>
         </div>
       </Carousel>
     );
@@ -35,7 +41,7 @@ export default PageCarousel;
 
 const styles = {
   container: {
-    marginTop: "0"
+    marginTop: "5rem"
   },
   imgContainer: {
     width: "100%",
@@ -48,5 +54,9 @@ const styles = {
     objectFit: "cover",
     textAlign: "center",
     position: "relative"
+  },
+  typography: {
+    fontFamily: "Arial, Helvetica, sans-serif",
+    fontSize: "18px"
   }
 };

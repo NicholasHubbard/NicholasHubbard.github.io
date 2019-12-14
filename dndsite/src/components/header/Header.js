@@ -253,8 +253,10 @@ export default function PrimarySearchAppBar() {
   return (
     <div className={classes.grow}>
       <AppBar
-        position="relative"
-        style={{ background: "black", display: "block", marginBottom: "1em" }}
+        position="fixed"
+        style={{
+          background: "black"
+        }}
       >
         <Toolbar>
           <IconButton
@@ -342,6 +344,7 @@ export default function PrimarySearchAppBar() {
           </div>
         </Toolbar>
       </AppBar>
+      <Toolbar />
       {renderMobileMenu}
       {renderMenu}
       {renderIconMenu}

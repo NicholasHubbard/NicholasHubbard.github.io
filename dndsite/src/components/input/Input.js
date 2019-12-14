@@ -21,17 +21,13 @@ export default function Input() {
     <div className={classes.container}>
       <div>
         <TextField
-          id="filled-full-width"
-          label="Label"
-          style={{ margin: 8 }}
-          placeholder="Search..."
-          helperText="Use this to find what you want!"
-          fullWidth
+          label="Search"
+          id="outlined-margin-normal"
+          //defaultValue="Default Value"
+          className={classes.textField}
+          //helperText="Some important text"
           margin="normal"
-          InputLabelProps={{
-            shrink: true
-          }}
-          variant="filled"
+          variant="outlined"
         />
       </div>
     </div>

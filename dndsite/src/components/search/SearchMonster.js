@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { NavLink } from "react-router-dom";
-//import Input from "../input/Input";
 
 function Monster() {
   const [keyword, setKeyword] = useState("");
@@ -27,16 +28,25 @@ function Monster() {
   return (
     <div>
       {monsterData && (
-        <div>
-          <h1>
-            D&D Monster Search
-            <input
-              value={keyword}
-              onChange={handleChange}
-              style={styles.input}
-              placeholder="Search..."
-            />
-          </h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "1em 1em 1em 2em"
+          }}
+        >
+          <TextField
+            id="outlined-full-width"
+            label="Search Monsters"
+            style={{ margin: 8, width: "80%" }}
+            placeholder="Search..."
+            fullWidth
+            margin="normal"
+            value={keyword}
+            onChange={handleChange}
+            InputLabelProps={{}}
+            variant="outlined"
+          />
 
           <ul>
             {keyword &&
@@ -53,6 +63,10 @@ function Monster() {
                         }
                       }}
                       key={monster.name}
+                      style={{
+                        textDecoration: "none",
+                        color: "#16A085"
+                      }}
                     >
                       <p>{monster.name}</p>
                     </NavLink>
@@ -69,6 +83,21 @@ function Monster() {
 }
 
 export default Monster;
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: "100%"
+  },
+  cssLabel: {
+    color: "black"
+  }
+}));
 
 const styles = {
   input: {

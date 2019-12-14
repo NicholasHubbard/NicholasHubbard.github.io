@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { NavLink } from "react-router-dom";
@@ -28,15 +30,21 @@ function Spell() {
     <div>
       {spellData && (
         <div>
-          <h1>
-            D&D Spell Search
-            <input
-              value={keyword}
-              onChange={handleChange}
-              style={styles.input}
-              placeholder="Search..."
-            />
-          </h1>
+          <h1>D&D Spell Search</h1>
+          <TextField
+            id="outlined-full-width"
+            label="Search Spells"
+            style={{ margin: 8 }}
+            placeholder="Search..."
+            fullWidth
+            margin="normal"
+            value={keyword}
+            onChange={handleChange}
+            InputLabelProps={{
+              shrink: true
+            }}
+            variant="outlined"
+          />
 
           <ul>
             {keyword &&
@@ -53,6 +61,7 @@ function Spell() {
                         }
                       }}
                       key={spell.name}
+                      style={{ textDecoration: "none" }}
                     >
                       <p>{spell.name}</p>
                     </NavLink>
@@ -69,6 +78,18 @@ function Spell() {
 }
 
 export default Spell;
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: "auto"
+  }
+}));
 
 const styles = {
   input: {

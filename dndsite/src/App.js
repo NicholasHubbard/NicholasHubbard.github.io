@@ -12,18 +12,20 @@ import Spell from "./components/spells/Spell";
 import Monsters from "./components/monsters/Monsters";
 import Monster from "./components/monsters/Monster";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Search from "./components/search/Search";
 import SearchSpell from "./components/search/SearchSpell";
 import SearchMonster from "./components/search/SearchMonster";
-import Nav from "./components/nav/Nav";
 import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core";
+import BackgroundImg1 from "./images/critRole.jpg";
+import BackgroundImg2 from "./images/monster.jpeg";
+import { makeStyles, Container } from "@material-ui/core";
 import { classes } from "istanbul-lib-coverage";
 import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
-    <Router>
+    <Router style={styles.container}>
       <Header />
       <main>
         <Switch>
@@ -31,13 +33,11 @@ function App() {
             <PageCarousel />
           </Route>
           <Route path="/Races">
-            <Paper style={styles.main}>
-              <Search />
+            <Paper style={styles.mainSearch1}>
+              <h1 style={styles.anchor2}>Dungeons and Dragons Races</h1>
             </Paper>
-
-            <Paper style={styles.main}>
-              <Races />
-            </Paper>
+            <Search />
+            <Races />
           </Route>
 
           <Route path="/Race">
@@ -62,12 +62,11 @@ function App() {
           </Route>
 
           <Route path="/Monsters">
-            <Paper style={styles.main}>
-              <SearchMonster />
+            <Paper style={styles.mainSearch2}>
+              <h1 style={styles.anchor2}>Dungeons and Dragons Monsters</h1>
             </Paper>
-            <Paper style={styles.main}>
-              <Monsters />
-            </Paper>
+            <SearchMonster />
+            <Monsters />
           </Route>
 
           <Route path="/Monster">
@@ -77,6 +76,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <Footer />
     </Router>
   );
 }
@@ -85,7 +85,7 @@ export default App;
 
 const styles = {
   container: {
-    backgroundColor: "grey"
+    backgroundColor: "#F6F6F6"
   },
 
   main: {
@@ -95,6 +95,22 @@ const styles = {
     margin: "2em 8em 2em 8em",
     padding: "2em",
     boxShadow: "10px 5px 5px grey"
+  },
+
+  mainSearch1: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "0",
+    padding: "4em",
+    backgroundImage: `url(${BackgroundImg1})`
+  },
+
+  mainSearch2: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "0",
+    padding: "4em",
+    backgroundImage: `url(${BackgroundImg2})`
   },
 
   nav: {
@@ -115,5 +131,11 @@ const styles = {
     margin: "0 1em 1em 0.5em",
     wordWrap: "break-word",
     padding: "5em 1em 5em 1em"
+  },
+  anchor2: {
+    fontSize: "2em",
+    color: "white",
+    fontStyle: "bold",
+    paddingLeft: "2em"
   }
 };
