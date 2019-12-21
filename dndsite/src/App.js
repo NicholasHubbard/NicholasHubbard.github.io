@@ -18,23 +18,37 @@ import SearchSpell from "./components/search/SearchSpell";
 import SearchMonster from "./components/search/SearchMonster";
 import Paper from "@material-ui/core/Paper";
 import BackgroundImg1 from "./images/critRole.jpg";
-import BackgroundImg2 from "./images/monster.jpeg";
+import BackgroundImg2 from "./images/spells.png";
+import BackgroundImg3 from "./images/monster.jpeg";
+import Card1 from "./components/card/card1";
+import Card2 from "./components/card/card2";
+import Card3 from "./components/card/card3";
 import { makeStyles, Container } from "@material-ui/core";
 import { classes } from "istanbul-lib-coverage";
 import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
+    // App page that creates the router layout for each section clicked on
     <Router style={styles.container}>
       <Header />
       <main>
         <Switch>
           <Route path="/Home">
             <PageCarousel />
+            <div style={{ margin: "3em 2em 2em 2em" }}>
+              <Card1 />
+            </div>
+            <div style={{ margin: "2em 2em 2em 2em" }}>
+              <Card2 />
+            </div>
+            <div style={{ margin: "2em 2em 2em 2em" }}>
+              <Card3 />
+            </div>
           </Route>
           <Route path="/Races">
             <Paper style={styles.mainSearch1}>
-              <h1 style={styles.anchor2}>Dungeons and Dragons Races</h1>
+              <h1 style={styles.anchor3}>Dungeons and Dragons Races</h1>
             </Paper>
             <Search />
             <Races />
@@ -47,12 +61,11 @@ function App() {
           </Route>
 
           <Route path="/Spells">
-            <Paper style={styles.main}>
-              <SearchSpell />
+            <Paper style={styles.mainSearch2}>
+              <h1 style={styles.anchor3}>Dungeons and Dragons Spells</h1>
             </Paper>
-            <Paper style={styles.main}>
-              <Spells />
-            </Paper>
+            <SearchSpell />
+            <Spells />
           </Route>
 
           <Route path="/Spell">
@@ -62,8 +75,8 @@ function App() {
           </Route>
 
           <Route path="/Monsters">
-            <Paper style={styles.mainSearch2}>
-              <h1 style={styles.anchor2}>Dungeons and Dragons Monsters</h1>
+            <Paper style={styles.mainSearch3}>
+              <h1 style={styles.anchor3}>Dungeons and Dragons Monsters</h1>
             </Paper>
             <SearchMonster />
             <Monsters />
@@ -76,7 +89,7 @@ function App() {
           </Route>
         </Switch>
       </main>
-      <Footer />
+      {/*<Footer />*/}
     </Router>
   );
 }
@@ -89,8 +102,6 @@ const styles = {
   },
 
   main: {
-    display: "flex",
-    justifyContent: "center",
     backgroundColor: "#F2F2F2",
     margin: "2em 8em 2em 8em",
     padding: "2em",
@@ -102,7 +113,11 @@ const styles = {
     justifyContent: "center",
     margin: "0",
     padding: "4em",
-    backgroundImage: `url(${BackgroundImg1})`
+    background: "linear-gradiant(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
+    backgroundImage: `url(${BackgroundImg1})`,
+    backgroundColor: "black",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center top"
   },
 
   mainSearch2: {
@@ -110,7 +125,25 @@ const styles = {
     justifyContent: "center",
     margin: "0",
     padding: "4em",
-    backgroundImage: `url(${BackgroundImg2})`
+    background: "linear-gradiant(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
+    backgroundImage: `url(${BackgroundImg2})`,
+    backgroundColor: "black",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center top"
+  },
+
+  mainSearch3: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "0",
+    padding: "4em",
+    background: "linear-gradiant(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
+    backgroundImage: `url(${BackgroundImg3})`,
+    backgroundColor: "black",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center top"
   },
 
   nav: {
@@ -132,10 +165,11 @@ const styles = {
     wordWrap: "break-word",
     padding: "5em 1em 5em 1em"
   },
-  anchor2: {
-    fontSize: "2em",
+  anchor3: {
+    fontSize: "2.5em",
     color: "white",
     fontStyle: "bold",
-    paddingLeft: "2em"
+    paddingLeft: "2em",
+    textShadow: "1px 1px 2px black"
   }
 };

@@ -16,11 +16,18 @@ class PageCarousel extends Component {
       >
         <div style={styles.imgContainer}>
           <img src={carousel1} alt="first slide" style={styles.imgStyle} />
-          <h1 className="legend" style={styles.typography}>
+          <h1
+            className="legend"
+            style={styles.typography}
+            href="https://dnd.wizards.com/"
+          >
             Check out the Full DND 5th Edition
           </h1>
         </div>
-        <div style={styles.imgContainer}>
+        <div
+          style={styles.imgContainer}
+          href="https://www.amazon.com/Dungeons-Dragons-Gaming-Books/b?ie=UTF8&node=16215"
+        >
           <img src={carousel2} alt="second slide" style={styles.imgStyle} />
           <h1 className="legend" style={styles.typography}>
             Order Books NOW!
@@ -28,7 +35,11 @@ class PageCarousel extends Component {
         </div>
         <div style={styles.imgContainer}>
           <img src={carousel3} alt="thrid slide" style={styles.imgStyle} />
-          <h1 className="legend" style={styles.typography}>
+          <h1
+            className="legend"
+            style={styles.typography}
+            href="https://critrole.com/"
+          >
             Check out Critical Role
           </h1>
         </div>

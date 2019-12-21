@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 
 class Monsters extends Component {
+  // Class constuctor for the creation of an array of objects pulled from an API
   constructor() {
     super();
     this.state = {
@@ -10,6 +11,7 @@ class Monsters extends Component {
     };
   }
 
+  // componentDidMount that fetches data from an API
   componentDidMount() {
     fetch("http://www.dnd5eapi.co/api/monsters/")
       .then(results => {
@@ -42,7 +44,7 @@ class Monsters extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.container}>
         <div>{this.state.monsters}</div>
       </div>
     );
@@ -64,6 +66,11 @@ const styles = {
     backgroundColor: "white",
     margin: "1em 8em 1em 8em",
     padding: "0.5em",
+    borderColor: "grey",
+    borderStyle: "groove",
     boxShadow: "10px 5px 5px grey"
+  },
+  container: {
+    marginBottom: "10px"
   }
 };

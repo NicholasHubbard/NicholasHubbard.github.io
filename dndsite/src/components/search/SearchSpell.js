@@ -4,12 +4,14 @@ import TextField from "@material-ui/core/TextField";
 import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { NavLink } from "react-router-dom";
-//import Input from "../input/Input";
 
+// function that will create a search mechanism the will go through all the spells depending
+// on what the user types
 function Spell() {
   const [keyword, setKeyword] = useState("");
   const [spellData, setSpellData] = useState([]);
 
+  // API pull that will have the data on hand when searching
   useEffect(() => {
     fetch("http://www.dnd5eapi.co/api/spells/")
       .then(results => {
@@ -20,29 +22,34 @@ function Spell() {
       });
   }, []);
 
+  // const that takes in the event
   const handleChange = e => {
     setKeyword(e.target.value);
   };
 
   console.log(spellData);
 
+  // the list that will be returned on what data was filtered
   return (
     <div>
       {spellData && (
-        <div>
-          <h1>D&D Spell Search</h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "1em 1em 1em 2em"
+          }}
+        >
           <TextField
             id="outlined-full-width"
             label="Search Spells"
-            style={{ margin: 8 }}
+            style={{ margin: 8, width: "80%" }}
             placeholder="Search..."
             fullWidth
             margin="normal"
             value={keyword}
             onChange={handleChange}
-            InputLabelProps={{
-              shrink: true
-            }}
+            InputLabelProps={{}}
             variant="outlined"
           />
 
@@ -61,7 +68,10 @@ function Spell() {
                         }
                       }}
                       key={spell.name}
-                      style={{ textDecoration: "none" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "#16A085"
+                      }}
                     >
                       <p>{spell.name}</p>
                     </NavLink>
@@ -87,7 +97,10 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: "auto"
+    width: "100%"
+  },
+  cssLabel: {
+    color: "black"
   }
 }));
 
@@ -102,11 +115,3 @@ const styles = {
     fontSize: "1.0em"
   }
 };
-
-//constructor() {
-//super();
-//this.state = {
-//race: false,
-//url: this.props.url
-//}
-//}

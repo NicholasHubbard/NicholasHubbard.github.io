@@ -5,10 +5,13 @@ import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 import { NavLink } from "react-router-dom";
 
+// function that will create a search mechanism the will go through all the spells depending
+// on what the user types
 function Race() {
   const [keyword, setKeyword] = useState("");
   const [raceData, setRaceData] = useState([]);
 
+  // API pull that will have the data on hand when searching
   useEffect(() => {
     fetch("http://www.dnd5eapi.co/api/races/")
       .then(results => {
@@ -19,12 +22,14 @@ function Race() {
       });
   }, []);
 
+  // const that takes in the event
   const handleChange = e => {
     setKeyword(e.target.value);
   };
 
   console.log(raceData);
 
+  // the list that will be returned on what data was filtered
   return (
     <div>
       {raceData && (
