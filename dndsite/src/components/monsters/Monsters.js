@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 
 class Monsters extends Component {
   // Class constuctor for the creation of an array of objects pulled from an API
@@ -20,9 +20,10 @@ class Monsters extends Component {
       .then(data => {
         let monsters = data.results.map(monster => {
           return (
-            <Paper style={styles.main}>
+            <Button style={styles.main}>
+              {/* Navlink that will take the monster picked to the Monster specific page */}
               <NavLink
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", width: "100%" }}
                 to={{
                   pathname: "/Monster/" + monster.name,
                   state: {
@@ -33,7 +34,7 @@ class Monsters extends Component {
               >
                 <p style={styles.anchor}>{monster.name}</p>
               </NavLink>
-            </Paper>
+            </Button>
           );
         });
         this.setState({ monsters: monsters });
@@ -63,14 +64,12 @@ const styles = {
   main: {
     display: "flex",
     justifyContent: "flex-start",
-    backgroundColor: "white",
-    margin: "1em 8em 1em 8em",
+    backgroundColor: "#F2F2F2",
+    width: "80%",
+    margin: "2em 8em 2em 8em",
     padding: "0.5em",
     borderColor: "grey",
     borderStyle: "groove",
     boxShadow: "10px 5px 5px grey"
-  },
-  container: {
-    marginBottom: "10px"
   }
 };

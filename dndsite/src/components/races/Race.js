@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 
+// Function that points to a specific section with the API
 function Race() {
   const raceURL = useLocation().state.raceURL;
   const [race, setRace] = useState(false);
   const [url, setURL] = useState(raceURL);
 
+  // fetch data pull from a specifc request
   useEffect(() => {
     fetch(url)
       .then(results => {
@@ -17,6 +19,7 @@ function Race() {
       });
   }, []);
 
+  // Return function that displays the specific API
   return (
     <>
       {race && (

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
 
+// Spells class
 class Spells extends Component {
   constructor() {
     super();
@@ -18,9 +19,10 @@ class Spells extends Component {
       .then(data => {
         let spells = data.results.map(spell => {
           return (
-            <Paper style={styles.main}>
+            <Button style={styles.main}>
+              {/* Navlink that will take the spells picked to the Spells specific page */}
               <NavLink
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", width: "100%" }}
                 to={{
                   pathname: "/Spell/" + spell.name,
                   state: {
@@ -31,7 +33,7 @@ class Spells extends Component {
               >
                 <p style={styles.anchor}>{spell.name}</p>
               </NavLink>
-            </Paper>
+            </Button>
           );
         });
         this.setState({ spells: spells });
@@ -60,8 +62,9 @@ const styles = {
   main: {
     display: "flex",
     justifyContent: "flex-start",
-    backgroundColor: "white",
-    margin: "1em 8em 1em 8em",
+    backgroundColor: "#F2F2F2",
+    width: "80%",
+    margin: "2em 8em 2em 8em",
     padding: "0.5em",
     borderColor: "grey",
     borderStyle: "groove",

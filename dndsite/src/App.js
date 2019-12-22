@@ -1,7 +1,6 @@
 // Name: Nicholas Hubbard (Class: P&P V: 1219)
 
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PageCarousel from "./components/pageCarousel/PageCarousel";
@@ -23,19 +22,20 @@ import BackgroundImg3 from "./images/monster.jpeg";
 import Card1 from "./components/card/card1";
 import Card2 from "./components/card/card2";
 import Card3 from "./components/card/card3";
-import { makeStyles, Container } from "@material-ui/core";
-import { classes } from "istanbul-lib-coverage";
-import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
     // App page that creates the router layout for each section clicked on
-    <Router style={styles.container}>
+    <Router style={styles.backdrop}>
       <Header />
       <main>
+        {/* Switch plug in that lets the SPA switch between each page within the app */}
         <Switch>
+          {/* Home Page */}
           <Route path="/Home">
             <PageCarousel />
+
+            {/* used cards as the highlight navigation for the home page */}
             <div style={{ margin: "3em 2em 2em 2em" }}>
               <Card1 />
             </div>
@@ -46,6 +46,8 @@ function App() {
               <Card3 />
             </div>
           </Route>
+
+          {/* Races page */}
           <Route path="/Races">
             <Paper style={styles.mainSearch1}>
               <h1 style={styles.anchor3}>Dungeons and Dragons Races</h1>
@@ -54,12 +56,14 @@ function App() {
             <Races />
           </Route>
 
+          {/* Race specific page */}
           <Route path="/Race">
             <Paper style={styles.main}>
               <Race />
             </Paper>
           </Route>
 
+          {/* Spells Page */}
           <Route path="/Spells">
             <Paper style={styles.mainSearch2}>
               <h1 style={styles.anchor3}>Dungeons and Dragons Spells</h1>
@@ -68,12 +72,14 @@ function App() {
             <Spells />
           </Route>
 
+          {/* Spell specific page */}
           <Route path="/Spell">
             <Paper style={styles.main}>
               <Spell />
             </Paper>
           </Route>
 
+          {/* Monsters Page */}
           <Route path="/Monsters">
             <Paper style={styles.mainSearch3}>
               <h1 style={styles.anchor3}>Dungeons and Dragons Monsters</h1>
@@ -82,6 +88,7 @@ function App() {
             <Monsters />
           </Route>
 
+          {/* Monster specific page */}
           <Route path="/Monster">
             <Paper style={styles.main}>
               <Monster />
@@ -97,8 +104,8 @@ function App() {
 export default App;
 
 const styles = {
-  container: {
-    backgroundColor: "#F6F6F6"
+  backdrop: {
+    backgroundColor: "#f6f6f6"
   },
 
   main: {

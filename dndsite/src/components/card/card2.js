@@ -30,6 +30,7 @@ const useStyles = makeStyles({
   }
 });
 
+// Material UI Card that will show a highlighted section of a SPA
 export default function MediaCard() {
   const classes = useStyles();
 

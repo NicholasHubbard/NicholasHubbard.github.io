@@ -4,44 +4,51 @@ import { Carousel } from "react-responsive-carousel";
 import carousel1 from "../../images/dndHome.jpg";
 import carousel2 from "../../images/dndLink.jpg";
 import carousel3 from "../../images/critRole.jpg";
+import Button from "@material-ui/core/Button";
 
+// Carousel to flip through the highlighted front page
 class PageCarousel extends Component {
   render() {
     return (
+      // Returns a carousel of three links and pictures
       <Carousel
         showThumbs={false}
         infiniteLoop
         autoPlay
         style={styles.container}
       >
+        {/* Carousel link 1 */}
         <div style={styles.imgContainer}>
           <img src={carousel1} alt="first slide" style={styles.imgStyle} />
-          <h1
+          <Button
             className="legend"
             style={styles.typography}
             href="https://dnd.wizards.com/"
           >
             Check out the Full DND 5th Edition
-          </h1>
+          </Button>
         </div>
-        <div
-          style={styles.imgContainer}
-          href="https://www.amazon.com/Dungeons-Dragons-Gaming-Books/b?ie=UTF8&node=16215"
-        >
+        {/* Carousel link 2 */}
+        <div style={styles.imgContainer}>
           <img src={carousel2} alt="second slide" style={styles.imgStyle} />
-          <h1 className="legend" style={styles.typography}>
+          <Button
+            className="legend"
+            style={styles.typography}
+            href="https://www.amazon.com/Dungeons-Dragons-Gaming-Books/b?ie=UTF8&node=16215"
+          >
             Order Books NOW!
-          </h1>
+          </Button>
         </div>
+        {/* Carousel link 3 */}
         <div style={styles.imgContainer}>
           <img src={carousel3} alt="thrid slide" style={styles.imgStyle} />
-          <h1
+          <Button
             className="legend"
             style={styles.typography}
             href="https://critrole.com/"
           >
             Check out Critical Role
-          </h1>
+          </Button>
         </div>
       </Carousel>
     );
@@ -50,6 +57,7 @@ class PageCarousel extends Component {
 
 export default PageCarousel;
 
+// Styles used for this component
 const styles = {
   container: {
     marginTop: "5rem"

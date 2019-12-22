@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+// Spinner function that will creata user feedback with a small loading animation
 export default function CircularDeterminate() {
   const classes = useStyles();
   const [progress, setProgress] = React.useState(0);

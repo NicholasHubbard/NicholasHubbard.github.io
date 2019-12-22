@@ -20,6 +20,7 @@ import UserImage from "../../images/UserImage.png";
 import TitleIcon from "../../images/titleIcon.png";
 import { StylesContext } from "@material-ui/styles";
 
+// Styles that are used for the Header
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1
@@ -63,6 +64,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+// Plug in Header app bar from Material UI
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -72,6 +74,7 @@ export default function PrimarySearchAppBar() {
   const isIconMenuOpen = Boolean(iconAnchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  // Event handlers for sub menus that pull up depending on what you click
   const handleProfileMenuOpen = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -110,7 +113,7 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <NavLink
-        to=""
+        to="/Home"
         style={{
           textDecoration: "none",
           color: "black"
@@ -119,7 +122,7 @@ export default function PrimarySearchAppBar() {
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       </NavLink>
       <NavLink
-        to=""
+        to="/Home"
         style={{
           textDecoration: "none",
           color: "black"
